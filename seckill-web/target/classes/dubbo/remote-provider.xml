@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 一、声明要暴露的服务接口 -->
+    <dubbo:service interface="com.seckill.service.BusinessService" ref="BusinessService" timeout="100000"/>
+    <dubbo:service interface="com.seckill.service.CommodityService" ref="CommodityService" timeout="100000"/>
+    <dubbo:service interface="com.seckill.service.StockService" ref="StockService" timeout="100000"/>
+    <dubbo:service interface="com.seckill.service.UserService" ref="UserService" timeout="100000"/>
+
+    <!-- 二、接口实现类配置 -->
+    <bean id="BusinessService" class="com.seckill.service.impl.BusinessServiceImpl"/>
+    <bean id="CommodityService" class="com.seckill.service.impl.CommodityServiceImpl"/>
+    <bean id="StockService" class="com.seckill.service.impl.StockServiceImpl"/>
+    <bean id="UserService" class="com.seckill.service.impl.UserServiceImpl"/>
+</beans>

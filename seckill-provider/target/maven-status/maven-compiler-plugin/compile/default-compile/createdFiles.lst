@@ -1,0 +1,4 @@
+com\seckill\service\impl\UserServiceImpl.class
+com\seckill\service\impl\CommodityServiceImpl.class
+com\seckill\service\impl\BusinessServiceImpl.class
+com\seckill\service\impl\StockServiceImpl.class
